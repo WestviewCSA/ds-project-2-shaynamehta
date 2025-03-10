@@ -5,3 +5,10 @@ Due 3/12/25 11:59 PM
 After reading the specs, start populating a list of things you think 
 have to be done to finish this project 
 
+1) read specs and understand project
+
+	- wolverine knows to stay in limits of grid (does this mean we don't have to code restrictiosn in/)
+	- find a path using stack and queue and then find optimal path
+	
+queue approach 
+
