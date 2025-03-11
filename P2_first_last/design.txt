@@ -12,3 +12,14 @@ have to be done to finish this project
 	
 queue approach 
 
+
+
+3/11/25 notes and planning
+- start scanner and reading maze text files
+ for map system
+ need to read characters, determine what they are
+read first line of integers in order to determine maze size and quantity
+  - then make a 2d array? with the size of the maze and use that to traverse later on
+
+  in class planning 
+  
