@@ -32,38 +32,45 @@ public class p2 {
 			int numCols 		= scan.nextInt();
 			int numRooms 		= scan.nextInt();
 			
-			int rowIndex = 0;
 			
 			//process the rest of the map
 			while (scan.hasNextLine()) {
 				
 				//grab one row at a time
 				String row = scan.nextLine();
+				int rowIndex = 0;
+				//while row < num rows traverse and then once it is done, add room if 
+				//multiple; use another while loop to update room number
 				
-				if (row.length() > 0) {
-					for (int i = 0 ; i < numCols && i < row.length() ; i++) {
-						
-						char el = row.charAt(i);
-						Tile obj = new Tile(rowIndex, i, el); //creates a Tile for each space in map
-						
-						//if there is another room
-						if (row.charAt(i) == '|') {
-							
-							rowIndex = 0;
-							
-						}
-					}
+				for (int roomNum = 0 ; roomNum < numRooms ; roomNum++ ) {
 					
-				}
+					
+				
+					if (row.length() > 0) {
+						for (int i = 0 ; i < numCols && i < row.length() ; i++) {
+						
+							char el = row.charAt(i);
+							//creates a Tile for each space in map
+							Tile obj = new Tile(rowIndex, i, roomNum, el); 
+							System.out.println(obj.toString());
+						
+						}
+					
+					}
 				
 				rowIndex++;
-			}
+				
+				}
 			
+				rowIndex = 0;
+			
+			}	
 			
 			
 		} catch (FileNotFoundException e) {
 			System.out.println("error"); //change this to the right error
 		}
+		
 		
 		
 	}

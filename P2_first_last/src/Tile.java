@@ -14,6 +14,14 @@ public class Tile {
 			this.room = room;
 		}
 		
+		public String toString() {
+			
+			return row + " " + col + " " + room + " " + location;
+			
+			
+			
+		}
+		
 		//getters and setter
 		public int getRow() {
 			return row;
