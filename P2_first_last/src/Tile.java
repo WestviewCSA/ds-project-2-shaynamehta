@@ -2,15 +2,16 @@
 public class Tile {
 
 	
-		private int row, col;
+		private int row, col, room;
 		private char location;
 		
 		//main constructors
-		public Tile(int row, int col, char location) {
+		public Tile(int row, int col, int room, char location) {
 			super();
 			this.row = row;
 			this.col = col;
 			this.location = location;
+			this.room = room;
 		}
 		
 		//getters and setter
@@ -31,6 +32,13 @@ public class Tile {
 		}
 		public void setLocation(char location) {
 			this.location = location;
+		}
+		public int getRoom() {
+			return room;
+		}
+
+		public void setRoom(int room) {
+			this.room = room;
 		}
 		
 		

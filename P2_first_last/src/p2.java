@@ -12,7 +12,12 @@ public class p2 {
 		
 	}
 	
-	public static void readMap(String filename) {
+	
+	//how to deal with multiple rooms? reset row index
+	public static void readMap(String filename) { 	//this reads all the rooms but
+													//there is nothing that indicates when a new
+													//room is entered; there are just a lot of 
+													//tiles created
 		
 		try {
 			File test = new File(filename);
@@ -39,12 +44,21 @@ public class p2 {
 					for (int i = 0 ; i < numCols && i < row.length() ; i++) {
 						
 						char el = row.charAt(i);
-						Tile obj = new Tile(rowIndex, i, el);
+						Tile obj = new Tile(rowIndex, i, el); //creates a Tile for each space in map
 						
+						//if there is another room
+						if (row.charAt(i) == '|') {
+							
+							rowIndex = 0;
+							
+						}
 					}
 					
 				}
+				
+				rowIndex++;
 			}
+			
 			
 			
 		} catch (FileNotFoundException e) {
@@ -53,6 +67,36 @@ public class p2 {
 		
 		
 	}
+	
+	//reading the coordinate form map
+	public static void readCoordMap(String filename) {
+		
+		try {
+			File test = new File(filename);
+			Scanner scan = new Scanner(test);
+			
+			
+			//first obtain specs in the first line
+			int numRows 	= scan.nextInt();
+			int numCols 	= scan.nextInt();
+			int numRooms 	= scan.nextInt();
+			
+			//now process the rest of the map
+			//store in a tile but instead of typical traversal
+			//will use the data given to properly place it
+			
+			
+			
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		
+		
+		
+	}
+	
+	
 	
 	
 }

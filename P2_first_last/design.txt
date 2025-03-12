@@ -21,5 +21,11 @@ queue approach
 read first line of integers in order to determine maze size and quantity
   - then make a 2d array? with the size of the maze and use that to traverse later on
 
-  in class planning 
-  
+ 
+ coordinate reading
+ - store each coord in Tiles
+ - to check for walking access Tile x and Tile y 
+ 	if x and y have same row index and consectutive col number or vice versa and they have the 
+ 	same free walkway character, that means it is a viable path
+ 	- means that when figuring out ig shoudl walk, first check if the characters are the same
+ 	
