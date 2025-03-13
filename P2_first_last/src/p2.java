@@ -33,18 +33,17 @@ public class p2 {
 			int numRooms 		= scan.nextInt();
 			
 			
+			int rowIndex = 0;
 			//process the rest of the map
 			while (scan.hasNextLine()) {
 				
 				//grab one row at a time
 				String row = scan.nextLine();
-				int rowIndex = 0;
+				
 				//while row < num rows traverse and then once it is done, add room if 
 				//multiple; use another while loop to update room number
 				
 				for (int roomNum = 0 ; roomNum < numRooms ; roomNum++ ) {
-					
-					
 				
 					if (row.length() > 0) {
 						for (int i = 0 ; i < numCols && i < row.length() ; i++) {
@@ -52,8 +51,7 @@ public class p2 {
 							char el = row.charAt(i);
 							//creates a Tile for each space in map
 							Tile obj = new Tile(rowIndex, i, roomNum, el); 
-							System.out.println(obj.toString());
-						
+							System.out.println(obj.toString()); 
 						}
 					
 					}
@@ -61,9 +59,7 @@ public class p2 {
 				rowIndex++;
 				
 				}
-			
 				rowIndex = 0;
-			
 			}	
 			
 			
