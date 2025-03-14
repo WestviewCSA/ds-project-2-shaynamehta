@@ -53,7 +53,7 @@ public class p2 {
 							char el = row.charAt(i);
 							//creates a Tile for each space in map
 							Tile obj = new Tile(rowIndex, i, roomNum, el); 
-							System.out.println(obj.toString());
+							
 						
 						}
 					
@@ -71,6 +71,8 @@ public class p2 {
 		} catch (FileNotFoundException e) {
 			System.out.println("error"); //change this to the right error
 		}
+		
+		
 		
 		
 		
