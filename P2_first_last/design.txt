@@ -1,0 +1,31 @@
+
+Design Plan
+Due 3/12/25 11:59 PM
+
+After reading the specs, start populating a list of things you think 
+have to be done to finish this project 
+
+1) read specs and understand project
+
+	- wolverine knows to stay in limits of grid (does this mean we don't have to code restrictiosn in/)
+	- find a path using stack and queue and then find optimal path
+	
+queue approach 
+
+
+
+3/11/25 notes and planning
+- start scanner and reading maze text files
+ for map system
+ need to read characters, determine what they are
+read first line of integers in order to determine maze size and quantity
+  - then make a 2d array? with the size of the maze and use that to traverse later on
+
+ 
+ coordinate reading
+ - store each coord in Tiles
+ - to check for walking access Tile x and Tile y 
+ 	if x and y have same row index and consectutive col number or vice versa and they have the 
+ 	same free walkway character, that means it is a viable path
+ 	- means that when figuring out ig shoudl walk, first check if the characters are the same
+ 	
