@@ -46,6 +46,11 @@ public class Tile {
 	public void setRoom(int room) {
 		this.room = room;
 	}
+
+	public String getValue() {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 	
 
